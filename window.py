@@ -27,7 +27,7 @@ class Window(QWidget):
         self.imgMeta.setPixmap(QPixmap("./img/meta.png"))
         self.imgMeta.setScaledContents(True)
         self.imgMeta.resize(100, 100)
-        self.imgMeta.move(10, 300)
+        self.imgMeta.move(10, 280)
 
         #Botón iniciar
         self.btnIniciar = QPushButton("Iniciar", self)

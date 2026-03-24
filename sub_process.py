@@ -15,16 +15,16 @@ class SubProceso(QThread):
             x = self.label.x()
             y = self.label.y()
 
-            if x < 550 and y <300:
+            if x < 550 and y <250:
                 x += 10
 
-            elif y >= 300:
-                x -= 10
-            elif self.tipo=="Liebre":
-                time.sleep(5)
-    
-            else:
+            elif x >= 550 and y < 250:
                 y += 10
-        
+            elif x > 10 and y >=250:
+                x -= 10
+            if self.tipo == "Liebre" and y == 250 and x == 400:
+                time.sleep(6)
+            print(f"y: {y}")
+            print(f"x: {x}")
             self.actualizar.emit(x, y)
             time.sleep(self.tiempo / 1000.0)
